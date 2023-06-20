@@ -1,0 +1,17 @@
+
+x = int(input("Enter the first number: "))
+y = int(input("Enter the second number: "))
+
+x_string = str(x)
+y_string = str(y)
+a = int(y_string[0] + y_string[1])
+b = int(y_string[2] + y_string[3])
+c = int(x_string[0] + x_string[1])
+d = int(x_string[2] + x_string[3])
+
+
+middle = (a+b)*(c+d) - a*c - b*d
+xtimesy = (10**(len(y_string)) * a*c) + (10**(len(y_string)/2) * (middle))  + b*d
+
+print(f"Karatsuba Multiplication: x * y = {xtimesy}")
+print(f"3rd Grade Algorithum: x * y = {x*y}")
